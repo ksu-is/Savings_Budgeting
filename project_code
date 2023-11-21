@@ -30,3 +30,29 @@ def basic():
         print("You should reach your goal by",calendar.month_name[num])
 
     print("You have to save ", rem,",", "which is", monthly_cont, "each month")
+
+def adv():
+    print("Welcome to advanced")
+    trate = float(input("Rough Tax Rate: ")) 
+    insurance = float(input("Monthly insurance: "))
+    avgliv = float(input("Enter an rough total of gas, food, entertainment, and subscriptions: "))
+    debt_cont = float(input("Average debt contribution: "))
+
+    #FIXED ADVANCED VARIABLES TO ALIGN WITH BASIC VARIABLES TO SIMPLIFY CODE. LEFT OFF AT MCONT
+    #does math for remaining and monthly savings 
+
+    rem = goal - current 
+    ptax = round(minc * trate, 2) 
+    after_exp = ptax - insurance - avgliv - debt_cont
+    monthly_cont = round(after_exp / 2, 2)
+    timetil = round(rem / monthly_cont, 0)
+
+    #prints if the goal is achievable during the same month or if it's years (UNFINISHED)
+    if timetil > 12:
+        print("You should reach your goal in about ", end='')
+        print(round(timetil / 12, 0),"years!")
+    else:
+        num = int(timetil)
+        print("You should reach your goal ", calendar.month_name[num])
+
+    print("You have to save ",rem,",", "which is",monthly_cont,"each month") 
