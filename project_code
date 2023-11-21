@@ -1,1 +1,18 @@
 #this is all of the code 
+
+#RE-STRUCTURE ALL VARIABLES
+import math
+import calendar
+import webbrowser
+from datetime import datetime, timedelta
+
+dt = datetime.now()
+td = timedelta(days=4)
+my_date = dt + td
+
+print('''Welcome to SaraTainin Savings Calculator!
+Before we get started, please enter some general financial information.''')
+goal = float(input("Savings goal: "))
+current = float(input("Current amount: "))
+minc = float(input("Recent paycheck: ")) * 2
+monthly_cont = minc * .4
