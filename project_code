@@ -16,3 +16,17 @@ goal = float(input("Savings goal: "))
 current = float(input("Current amount: "))
 minc = float(input("Recent paycheck: ")) * 2
 monthly_cont = minc * .4
+
+#basic calculator function
+def basic():
+    print("Welcome to basic calculator")
+    rem = goal - current 
+    time = round(rem / monthly_cont)
+    if time > 12:
+        print("You should reach your goal in about ", end='')
+        print(round(time / 12, 0),"years!")
+    elif int(time <= 12):
+        num = int(time)
+        print("You should reach your goal by",calendar.month_name[num])
+
+    print("You have to save ", rem,",", "which is", monthly_cont, "each month")
