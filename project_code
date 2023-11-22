@@ -56,3 +56,19 @@ def adv():
         print("You should reach your goal ", calendar.month_name[num])
 
     print("You have to save ",rem,",", "which is",monthly_cont,"each month") 
+
+#NOT FINAL WEBSITES USED. FOR TESTING ONLY
+def gentip():
+    print("""
+    Welcome to the general savings tips and tricks guide!
+          
+                [1] - cutting costs 
+                [2] - rule of thumb
+                [3] - return to previous menu
+          """)
+    gtaction = input("Please select an option: ")
+    if gtaction == '1':
+        webbrowser.open("https://www.truist.com/money-mindset/principles/budgeting-by-values/reducing-your-expenses")
+    elif gtaction == '2':
+        webbrowser.open("https://www.tiaa.org/public/learn/personal-finance-101/how-much-of-my-income-should-i-save-every-month#:~:text=mean%20saving%20longer.-,At%20least%2020%25%20of%20your%20income%20should%20go%20towards%20savings,you%20to%20budget%20your%20money.")
+
