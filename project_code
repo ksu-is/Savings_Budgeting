@@ -72,3 +72,26 @@ def gentip():
     elif gtaction == '2':
         webbrowser.open("https://www.tiaa.org/public/learn/personal-finance-101/how-much-of-my-income-should-i-save-every-month#:~:text=mean%20saving%20longer.-,At%20least%2020%25%20of%20your%20income%20should%20go%20towards%20savings,you%20to%20budget%20your%20money.")
 
+#Menu Portion of the Code, May be Scrapped!
+def main():
+    print("""
+    Please pick one of the 4 options!
+
+        [1] - Basic Calculator
+        [2] - Advanced Calculator
+        [3] - General Tips
+        [4] - Exit
+            """)
+
+    action = input("what would you like to do?: ")
+    if action == '1':
+        print("Directing you to Basic Calculator")
+        basic()
+    elif action == '2':
+        print("Directing you to Advanced Calculator")
+        adv()
+    elif action == '3':
+        print("Directing you to General Tips")
+        gentip()
+    elif action == '4':
+        print("Goodbye!")
